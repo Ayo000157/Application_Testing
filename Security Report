@@ -1,0 +1,122 @@
+Scan Overview 
+
+Command Used: nmap -sn -n 192.168.1.0/24 
+
+Findings: 
+
+Total IP addresses scanned: 256 
+
+Active hosts discovered: 38 devices 
+
+Latency ranged from ~0.00068s to 0.17s, indicating all devices are within a local network (1 hop) 
+
+Analysis: 
+
+The network is highly populated, suggesting multiple connected devices such as laptops, mobile phones, and possibly IoT devices. 
+
+The presence of many active hosts indicates a busy office or shared network environment. 
+
+Host Discovery Insights 
+
+Common gateway likely: 192.168.1.1 (router) 
+
+Multiple devices distributed across the subnet (e.g., .33, .50, .75, .111, .143) 
+
+No immediate filtering observed during host discovery phase 
+
+ 
+Detailed Host Analysis 
+
+Host: 192.168.1.97 
+
+Command Used: sudo nmap -A 192.168.1.97 
+
+Findings: 
+
+Host is active 
+
+All 1000 scanned ports are closed 
+
+MAC Address: Unknown vendor 
+
+OS detection: Inconclusive 
+
+Interpretation: 
+
+Device is likely well-secured or idle, with no exposed services 
+
+Could be a mobile device or a system with firewall enabled 
+
+Host: 192.168.1.88 (OPPO-A5x.ipnxng.net) 
+
+Command Used: sudo nmap -A 192.168.1.88 
+
+Findings: 
+
+Host identified as OPPO A5x (Android device) 
+
+All scanned ports are closed 
+
+MAC vendor not resolved 
+
+OS detection: Inconclusive 
+
+Interpretation: 
+
+Likely a smartphone device 
+
+Closed ports indicate low exposure to network attacks 
+
+Typical behavior for mobile devices on Wi-Fi 
+
+2. Ax..... LTD Network Scan 
+
+A. Command Used: 
+
+nmap -sn -n 192.168.18.0/24 
+
+Findings: 
+
+ A total of 12 active hosts were discovered on the network. 
+
+Example active IP addresses include: 
+
+168.18.1, 192.168.18.2, 192.168.18.10, 192.168.18.11, ... 
+
+Analysis: 
+
+The /24 subnet allows scanning of 256 possible IP addresses. 
+
+ The network appears to have multiple active devices, indicating a functional and populated environment. 
+
+B. Detailed Scan of Host (192.168.18.10) 
+
+ Command Used: 
+
+sudo nmap -A 192.168.18.10 
+
+ Key Findings: 
+
+Operating System: 
+
+ Identified as Microsoft Windows  
+
+Open Ports & Services: 
+135/tcp → Microsoft RPC 
+139/tcp → NetBIOS Session Service 
+ 443/tcp → HTTPS (SSL enabled) 
+ 445/tcp → SMB (file sharing) 
+ 808/tcp → .NET Message Framing 
+ 5357/tcp → Microsoft HTTP API 
+Additional Observations: 
+ NetBIOS name: VANESSA-AX....
+ SMB message signing is enabled but not enforced 
+SSL certificate is expired (validity ended in 2022) 
+ Device manufacturer linked to MAC: Chongqing Fugui Electronics  
+ 
+
+Overall Conclusion 
+
+ The Ax.... LTD network is active with multiple devices detected. 
+
+Host 192.168.18.10 is a Windows-based system with several open services, some of which may present security risks if not properly managed. 
